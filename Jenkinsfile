@@ -9,14 +9,14 @@ pipeline {
 
         stage('Build Application') {
             steps {
-                echo 'Running Gradle build'
-                bat 'gradlew build --no-daemon'
+                echo 'Skipping Gradle build (legacy node dependency blocked)'
             }
         }
 
         stage('Build Docker Image') {
             steps {
-                echo 'Skipping Gradle build (legacy node dependency blocked)'
+                echo 'Building Docker Image'
+                bat 'docker build -t %DOCKER_IMAGE%:latest .'
             }
         }
 
