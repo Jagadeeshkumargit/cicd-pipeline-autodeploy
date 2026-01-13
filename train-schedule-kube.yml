@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
       - name: train-schedule
-        image: image: jagadeeshkumarkonne/train-schedule-app:latest
+        image: jagadeeshkumarkonne/train-schedule-app:latest
         ports:
         - containerPort: 8080
         livenessProbe:
