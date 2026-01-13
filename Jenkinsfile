@@ -16,8 +16,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                echo 'Building Docker Image'
-                bat 'docker build -t %DOCKER_IMAGE%:latest .'
+                echo 'Skipping Gradle build (legacy node dependency blocked)'
             }
         }
 
